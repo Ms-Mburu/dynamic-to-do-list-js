@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create the remove button
         const removeBtn = document.createElement('button');
         removeBtn.textContent = "Remove";
-        removeBtn.className = 'remove-btn';
+        removeBtn.classList.add('remove-btn'); // ✅ Use classList.add()
 
         // Assign onclick to remove the <li> element
         removeBtn.onclick = function () {
@@ -35,9 +35,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addButton.addEventListener('click', addTask);
 
-    taskInput.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
-            addTask();
-        }
-    });
-});
+    taskInput
